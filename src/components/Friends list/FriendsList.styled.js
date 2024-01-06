@@ -12,10 +12,10 @@ align-items: center;
 
 padding :5px;
 
-background-color: #fff;
-border: 1px solid grey;
-border-radius: 5%;
-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.5);
+background-color:${p => p.theme.colors.background};
+border: ${p => p.theme.borders.gray};
+border-radius: ${p=>p.theme.radii.md};
+box-shadow: ${p => p.theme.shadows.normal};
 
 `
 const FriendStatus = styled.span`
@@ -23,11 +23,12 @@ width: 10px;
 height: 10px;
 border-radius: 50%;
 margin-right :5px;
-background-color: ${({ isOnline }) => isOnline ? '#00b300': '#ff0000'};
+/* background-color: ${({ isOnline }) => isOnline ? '#00b300' : '#ff0000'}; */
+background-color: ${({ theme, isOnline }) => isOnline ? theme.colors.green : theme.colors.red };
 `
 const FriendImg = styled.img`
-border:1px solid gray;
-border-radius :5px;
+border: ${p => p.theme.borders.gray};
+border-radius :${p => p.theme.radii.md};
 margin-right:5px;
 
 `

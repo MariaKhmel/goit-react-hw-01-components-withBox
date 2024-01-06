@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const StatsSection = styled.section`
-background-color: #fff;
+background-color: ${p => p.theme.colors.background};
 display: flex;
 margin: 0;
 
 `
 
 export const StatsTitle = styled.h2`
-background-color: #fff;
-color: darkgrey;
+background-color: ${p => p.theme.colors.background};
+color: ${p => p.theme.colors.text};
 text-align: center;
 padding :15px;
 

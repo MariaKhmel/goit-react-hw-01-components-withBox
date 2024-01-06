@@ -6,10 +6,10 @@ const TransactionTable = styled.table`
 `
 const TableHead = styled.thead`
 background-color: #00ffff;
-/* border-radius: 5%; */
-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.5);
+
+box-shadow: ${p => p.theme.shadows.normal};
 :not(:last-child){
-border-right: 1px solid white;
+border-right: ${p => `${p.theme.borders.normal}${p.theme.colors.white}`};
 
 }
 `
@@ -18,9 +18,9 @@ const TableBody = styled.tbody`
 :first-child{
     text-transform: capitalize;
 }
-background-color: white;
-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.5);
-border: 1px solid gray;
+background-color: ${p => p.theme.colors.white};
+box-shadow: ${p => p.theme.shadows.normal};
+border: ${p => p.theme.borders.gray};
 `
 
 
@@ -29,19 +29,19 @@ width:170px;
 padding: 15px;
 
 text-transform: uppercase;
-color: white;
+color: ${p => p.theme.colors.white};
 `
 
 const TableRow = styled.tr`
 &:nth-child(even){
- background-color: lightgray;   
+ background-color: ${p => p.theme.colors.background};
 }
 
 `
 const CellData = styled.td`
-color: grey;
+color: ${p => p.theme.colors.grey};
 text-align: center;
-border: 1px solid lightgray;
+border: ${p => p.theme.borders.gray};
 
 
 `

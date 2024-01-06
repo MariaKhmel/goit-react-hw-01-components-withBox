@@ -2,18 +2,14 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 margin-bottom:20px;
-/* height: 100vh; */
-/* display: flex;
-align-items: center;
-justify-content: center; */
 
 `
 
 export const ProfileContainer = styled.div`
-background-color: white;
-border-radius : 10px;
+background-color: ${p => p.theme.colors.background};
+border-radius : ${p => p.theme.radii.lg};
 overflow: hidden;
-border: 1px solid darkgray;
+border: ${p => p.theme.borders.gray};
 display: flex;
 flex-direction:column;
 
@@ -21,21 +17,20 @@ flex-direction:column;
 
 export const Avatar = styled.img`
 display: block;
-
   height: 80px;
-  border-radius:50%;
+  border-radius:${p => p.theme.radii.round};
   margin: 20px auto;
 
 `
 export const Description = styled.div`
   text-align: center;
-  color: grey;
+  color: ${p => p.theme.colors.grey};
 `
 
 
 export const Name = styled.p`
-color: black;
-font-size: 20px;
+color: ${p => p.theme.colors.black};
+font-size: ${p => p.theme.fontSizes.m};
 margin-bottom : 10px;
 `
 export const Tag = styled.p`
@@ -48,11 +43,11 @@ margin-bottom : 20px;
 
 export const Stats = styled.ul`
 display: inline-flex;
-background-color: lightgrey;
+background-color: ${p => p.theme.colors.background};
 
 `
 export const StatsItems = styled.li`
-border: 1px solid darkgray;
+border: ${p => p.theme.borders.gray};
 padding: 15px;
 text-align: center;
 width: 100%;
@@ -61,12 +56,12 @@ width: 100%;
 
 export const StatsLable = styled.span`
 display: block;
-color: grey;
+color: ${p => p.theme.colors.grey};
 
 `
 
 export const StatsValue = styled.span`
 display: block;
-color: black;
+color: ${p => p.theme.colors.black};
 
 `
