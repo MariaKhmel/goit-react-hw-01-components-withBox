@@ -6,7 +6,7 @@ import user from '../user.json';
 import stactics from '../statistics.json';
 import friends from '../friends.json';
 import transactions from '../transactions.json'
-
+import { Box } from 'utils/Box';
 
 
 const statsTitle = 'Upload stats';
@@ -14,7 +14,7 @@ const statsTitle = 'Upload stats';
 
 export const App = () => {
   return (
-    <>
+    <Box>
 <Profile
   username={user.username}
   tag={user.tag}
@@ -33,7 +33,7 @@ export const App = () => {
       <TransactionHistory
       items={transactions}
       />
- </>
+ </Box>
   );
 };
 
